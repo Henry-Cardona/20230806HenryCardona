@@ -576,3 +576,10 @@ C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Deb
 C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Debug\net6.0\AdministracionCRUD.pdb
 C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Debug\net6.0\AdministracionCRUD.genruntimeconfig.cache
 C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Debug\net6.0\ref\AdministracionCRUD.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\Irony.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\XLParser.dll
