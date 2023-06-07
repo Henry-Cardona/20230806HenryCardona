@@ -9,99 +9,90 @@ using AdministracionCRUD.Models;
 
 namespace AdministracionCRUD.Controllers
 {
-    public class EquipoesController : Controller
+    public class PedidoesController : Controller
     {
         private readonly DbcreativaContext _context;
 
-        public EquipoesController(DbcreativaContext context)
+        public PedidoesController(DbcreativaContext context)
         {
             _context = context;
         }
 
-        // GET: Equipoes
+        // GET: Pedidoes
         public async Task<IActionResult> Index()
         {
-            var dbcreativaContext = _context.Equipos.Include(e => e.IdMarcaNavigation);
+            var dbcreativaContext = _context.Pedidos.Include(p => p.IdMarcaNavigation);
             return View(await dbcreativaContext.ToListAsync());
         }
 
-        // GET: Equipoes/Details/5
+        // GET: Pedidoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Equipos == null)
+            if (id == null || _context.Pedidos == null)
             {
                 return NotFound();
             }
 
-            var equipo = await _context.Equipos
-                .Include(e => e.IdMarcaNavigation)
+            var pedido = await _context.Pedidos
+                .Include(p => p.IdMarcaNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (equipo == null)
+            if (pedido == null)
             {
                 return NotFound();
             }
 
-            return View(equipo);
+            return View(pedido);
         }
-        
-        // GET: Equipoes/Create
+
+        // GET: Pedidoes/Create
         public IActionResult Create()
         {
-            List<Marca> marcas = _context.Marcas.ToList();
-            List<SelectListItem> selectListItems = marcas.Select(m => new SelectListItem
-            {
-                Value = m.Id.ToString(),
-                Text = m.Nombre
-            }).ToList();
-
-            ViewData["IdMarca"] = selectListItems;
-
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id");
             return View();
         }
 
-
-        // POST: Equipoes/Create
+        // POST: Pedidoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdMarca,Nombre,Serie,Tipo,Descripcion")] Equipo equipo)
+        public async Task<IActionResult> Create([Bind("Id,IdMarca,IdModelo,FechaInicio,FechaFinal,Estado")] Pedido pedido)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(equipo);
+                _context.Add(pedido);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", equipo.IdMarca);
-            return View(equipo);
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", pedido.IdMarca);
+            return View(pedido);
         }
 
-        // GET: Equipoes/Edit/5
+        // GET: Pedidoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Equipos == null)
+            if (id == null || _context.Pedidos == null)
             {
                 return NotFound();
             }
 
-            var equipo = await _context.Equipos.FindAsync(id);
-            if (equipo == null)
+            var pedido = await _context.Pedidos.FindAsync(id);
+            if (pedido == null)
             {
                 return NotFound();
             }
-            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", equipo.IdMarca);
-            return View(equipo);
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", pedido.IdMarca);
+            return View(pedido);
         }
 
-        // POST: Equipoes/Edit/5
+        // POST: Pedidoes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdMarca,Nombre,Serie,Tipo,Descripcion")] Equipo equipo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdMarca,IdModelo,FechaInicio,FechaFinal,Estado")] Pedido pedido)
         {
-            if (id != equipo.Id)
+            if (id != pedido.Id)
             {
                 return NotFound();
             }
@@ -110,12 +101,12 @@ namespace AdministracionCRUD.Controllers
             {
                 try
                 {
-                    _context.Update(equipo);
+                    _context.Update(pedido);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EquipoExists(equipo.Id))
+                    if (!PedidoExists(pedido.Id))
                     {
                         return NotFound();
                     }
@@ -126,51 +117,51 @@ namespace AdministracionCRUD.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", equipo.IdMarca);
-            return View(equipo);
+            ViewData["IdMarca"] = new SelectList(_context.Marcas, "Id", "Id", pedido.IdMarca);
+            return View(pedido);
         }
 
-        // GET: Equipoes/Delete/5
+        // GET: Pedidoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Equipos == null)
+            if (id == null || _context.Pedidos == null)
             {
                 return NotFound();
             }
 
-            var equipo = await _context.Equipos
-                .Include(e => e.IdMarcaNavigation)
+            var pedido = await _context.Pedidos
+                .Include(p => p.IdMarcaNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (equipo == null)
+            if (pedido == null)
             {
                 return NotFound();
             }
 
-            return View(equipo);
+            return View(pedido);
         }
 
-        // POST: Equipoes/Delete/5
+        // POST: Pedidoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Equipos == null)
+            if (_context.Pedidos == null)
             {
-                return Problem("Entity set 'DbcreativaContext.Equipos'  is null.");
+                return Problem("Entity set 'DbcreativaContext.Pedidos'  is null.");
             }
-            var equipo = await _context.Equipos.FindAsync(id);
-            if (equipo != null)
+            var pedido = await _context.Pedidos.FindAsync(id);
+            if (pedido != null)
             {
-                _context.Equipos.Remove(equipo);
+                _context.Pedidos.Remove(pedido);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool EquipoExists(int id)
+        private bool PedidoExists(int id)
         {
-          return (_context.Equipos?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Pedidos?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
