@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ronaldo7/Documents/GitHub/AdministracionCRUD/AdministracionCRUD/Views/Equipoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ronaldo7/Documents/GitHub/AdministracionCRUD/AdministracionCRUD/Views/Equipoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ronaldo7/Documents/GitHub/AdministracionCRUD/AdministracionCRUD/Views/Equipoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ronaldo7/Documents/GitHub/AdministracionCRUD/AdministracionCRUD/Views/Equipoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ronaldo7/Documents/GitHub/AdministracionCRUD/AdministracionCRUD/Views/Equipoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBvZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ronaldo7/Documents/GitHub/AdministracionCRUD/AdministracionCRUD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
