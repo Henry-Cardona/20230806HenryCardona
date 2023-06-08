@@ -583,3 +583,6 @@ C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Deb
 C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\SixLabors.Fonts.dll
 C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\System.IO.Packaging.dll
 C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\bin\Debug\net6.0\XLParser.dll
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Debug\net6.0\scopedcss\Views\Equipoes\Index.cshtml.rz.scp.css
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Debug\net6.0\scopedcss\Views\Marcas\Index.cshtml.rz.scp.css
+C:\Users\ronaldo7\Documents\GitHub\AdministracionCRUD\AdministracionCRUD\obj\Debug\net6.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css

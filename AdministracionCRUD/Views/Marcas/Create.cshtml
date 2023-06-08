@@ -1,12 +1,10 @@
 ﻿@model AdministracionCRUD.Models.Marca
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nueva Marca";
 }
 
-<h1>Create</h1>
-
-<h4>Marca</h4>
+<h4>Crear Nueva Marca</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -42,15 +40,13 @@
                 <input asp-for="Exactitud" class="form-control" />
                 <span asp-validation-for="Exactitud" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Guardar Registro" class="btn btn-sm btn-dark" /> |
+                <a asp-action="Index" class="btn btn-sm btn-dark">Regresar a la lista</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

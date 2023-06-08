@@ -19,10 +19,14 @@ namespace AdministracionCRUD.Controllers
         }
 
         // GET: Equipoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-            var dbcreativaContext = _context.Equipos.Include(e => e.IdMarcaNavigation);
-            return View(await dbcreativaContext.ToListAsync());
+            var equipos_encontrados = from equipos in _context.Equipos select equipos;
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                equipos_encontrados = equipos_encontrados.Where(item => item.Nombre!.Contains(buscar));
+            }
+            return View(await equipos_encontrados.ToListAsync());
         }
 
         // GET: Equipoes/Details/5

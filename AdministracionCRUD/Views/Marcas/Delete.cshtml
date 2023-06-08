@@ -1,14 +1,13 @@
 ﻿@model AdministracionCRUD.Models.Marca
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar";
 }
 
-<h1>Delete</h1>
+<h2>Eliminar Registros</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Estas seguro que deseas eliminar este registro?</h3>
 <div>
-    <h4>Marca</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -39,7 +38,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Eliminar Registro" class="btn btn-sm btn-danger" /> |
+        <a asp-action="Index" class="btn btn-sm btn-dark">Regresar a la Lista de Registros</a>
     </form>
 </div>

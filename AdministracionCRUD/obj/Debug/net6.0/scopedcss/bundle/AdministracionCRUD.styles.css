@@ -1,3 +1,87 @@
+/* _content/AdministracionCRUD/Views/Equipoes/Index.cshtml.rz.scp.css */
+body[b-lg6ymzt2hn] {
+}
+
+.contenedor[b-lg6ymzt2hn] {
+    with: 100%;
+    height: 80px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-content: center;
+}
+
+.form-text[b-lg6ymzt2hn] {
+    width: 400px;
+    height: 38px;
+    border: none;
+    background: linear-gradient(to right, #efefbb, #d4d3dd);
+    border-radius: 5px;
+}
+/* _content/AdministracionCRUD/Views/Home/Index.cshtml.rz.scp.css */
+body[b-3lv24mgqfc] {
+}
+
+
+.Container-Home[b-3lv24mgqfc] {
+    display: flex;
+    padding-top: 40px;
+}
+
+.Home-Image[b-3lv24mgqfc] {
+    width: 500px;
+    height: 500px;
+}
+
+.Description-Student[b-3lv24mgqfc] {
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.Description-Nombre[b-3lv24mgqfc] {
+    font-size: 52px;
+    padding-left: 20px;
+}
+
+.Description-Text[b-3lv24mgqfc] {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.Description-Tag[b-3lv24mgqfc] {
+    color: red;
+}
+
+.Description-Botones[b-3lv24mgqfc] {
+    padding-left: 20px;
+}
+
+.boton[b-3lv24mgqfc] {
+    border: none;
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+}
+/* _content/AdministracionCRUD/Views/Marcas/Index.cshtml.rz.scp.css */
+body[b-yutatvgrgs] {
+}
+
+.contenedor[b-yutatvgrgs] {
+    with: 100%;
+    height: 80px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-content: center;
+}
+
+.form-text[b-yutatvgrgs] {
+    width: 400px;
+    height: 38px;
+    border: none;
+    background: linear-gradient(to right, #efefbb, #d4d3dd);
+    border-radius: 5px;
+}
 /* _content/AdministracionCRUD/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

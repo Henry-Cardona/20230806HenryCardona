@@ -1,12 +1,10 @@
 ﻿@model AdministracionCRUD.Models.Pedido
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nuevo Pedido";
 }
 
-<h1>Create</h1>
-
-<h4>Pedido</h4>
+<h1>Crear Nuevo Pedido</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -41,15 +39,13 @@
                 <input asp-for="Estado" class="form-control" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Guardar Registro" class="btn btn-sm btn-dark" /> |
+                <a asp-action="Index" class="btn btn-sm btn-dark">Regresar a la Lista de Registros</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

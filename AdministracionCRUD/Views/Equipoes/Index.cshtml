@@ -1,18 +1,20 @@
 ﻿@model IEnumerable<AdministracionCRUD.Models.Equipo>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listado de Equipos";
 }
 
-<h1>Index</h1>
+<h1>Lista de Equipos</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="contenedor">
+    <form asp-controller="Equipoes" asp-action="Index">
+        Buscar por Nombre:
+        <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="btn btn-sm btn-dark" />
+        <a class="btn btn-sm btn-dark" asp-action="Create">Crear Nuevo Registro</a>
+    </form>
+</div>
 
-<form asp-action="ExportExcelEquipo" asp-controller="Export" method="post">
-    <button class="btn btn-success" type="submit">Exportar Excel</button>
-</form>
 <table class="table">
     <thead>
         <tr>
@@ -21,9 +23,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Serie)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tipo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
@@ -44,20 +43,20 @@
                 @Html.DisplayFor(modelItem => item.Serie)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Id)
+                @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Nombre)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Eliminar</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+<form asp-action="ExportExcelEquipo" asp-controller="Export" method="post">
+    <button class="btn btn-sm btn-dark" type="submit">Exportar Excel</button>
+</form>

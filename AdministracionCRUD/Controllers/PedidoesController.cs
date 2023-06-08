@@ -23,6 +23,12 @@ namespace AdministracionCRUD.Controllers
         {
             var dbcreativaContext = _context.Pedidos.Include(p => p.IdMarcaNavigation);
             return View(await dbcreativaContext.ToListAsync());
+            //var pedidos_encontrados = from pedidos in _context.Pedidos select pedidos;
+            //if (!String.IsNullOrEmpty(buscar))
+            //{
+              //  pedidos_encontrados = pedidos_encontrados.Where(item => item.id.Contains(buscar));
+            //}
+            //return View(await pedidos_encontrados.ToListAsync());
         }
 
         // GET: Pedidoes/Details/5

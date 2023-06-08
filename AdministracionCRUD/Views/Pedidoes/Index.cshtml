@@ -7,12 +7,13 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <form asp-controller="Pedidoes" asp-action="Index">
+        Buscar:
+        <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="btn btn-sm btn-dark" />
+        <a asp-action="Create" class="btn btn-sm btn-dark">Create New</a>
+    </form>
 </p>
-
-<form asp-action="ExportExcelPedidos" asp-controller="Export" method="post">
-    <button class="btn btn-success" type="submit">Exportar Excel</button>
-</form>
 
 <table class="table">
     <thead>
@@ -36,29 +37,32 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdModelo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaFinal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdModelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaFinal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Id)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<form asp-action="ExportExcelPedidos" asp-controller="Export" method="post">
+    <button class="btn btn-sm btn-dark" type="submit">Exportar Excel</button>
+</form>

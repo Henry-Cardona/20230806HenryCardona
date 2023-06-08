@@ -1,26 +1,19 @@
 ﻿@model IEnumerable<AdministracionCRUD.Models.Marca>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listado";
 }
 
-<h1>Listaado de marcas</h1>
+<h1>Listado de Marcas</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
-<form asp-controller="Marcas" asp-action="Index">
-    <p>
-        Buscar: 
-        <input type="text" name="buscar" class="form-text"/>
-        <input type="submit" value="Buscar" class="btn btn-sm btn-dark"/>
-    </p>
-</form>
-
-<form asp-action="ExportExcelMarca" asp-controller="Export" method="post">
-    <button class="btn btn-success" type="submit">Exportar Excel</button>
-</form>
+<div class="contenedor">
+    <form asp-controller="Marcas" asp-action="Index">
+        Buscar:
+        <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="btn btn-sm btn-dark" />
+        <a asp-action="Create" class="btn btn-sm btn-dark">Crear Nuevo Registro</a>
+    </form>
+</div>
 
 <table class="table">
     <thead>
@@ -41,26 +34,29 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Exactitud)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Exactitud)%
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Detalle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<form asp-action="ExportExcelMarca" asp-controller="Export" method="post">
+    <button class="btn btn-sm btn-dark" type="submit">Exportar Excel</button>
+</form>

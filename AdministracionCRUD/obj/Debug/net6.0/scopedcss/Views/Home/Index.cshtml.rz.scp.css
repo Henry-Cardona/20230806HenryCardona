@@ -1,0 +1,43 @@
+body[b-3lv24mgqfc] {
+}
+
+
+.Container-Home[b-3lv24mgqfc] {
+    display: flex;
+    padding-top: 40px;
+}
+
+.Home-Image[b-3lv24mgqfc] {
+    width: 500px;
+    height: 500px;
+}
+
+.Description-Student[b-3lv24mgqfc] {
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.Description-Nombre[b-3lv24mgqfc] {
+    font-size: 52px;
+    padding-left: 20px;
+}
+
+.Description-Text[b-3lv24mgqfc] {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.Description-Tag[b-3lv24mgqfc] {
+    color: red;
+}
+
+.Description-Botones[b-3lv24mgqfc] {
+    padding-left: 20px;
+}
+
+.boton[b-3lv24mgqfc] {
+    border: none;
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+}

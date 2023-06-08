@@ -1,0 +1,43 @@
+﻿body {
+}
+
+
+.Container-Home {
+    display: flex;
+    padding-top: 40px;
+}
+
+.Home-Image {
+    width: 500px;
+    height: 500px;
+}
+
+.Description-Student {
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.Description-Nombre {
+    font-size: 52px;
+    padding-left: 20px;
+}
+
+.Description-Text {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.Description-Tag {
+    color: red;
+}
+
+.Description-Botones {
+    padding-left: 20px;
+}
+
+.boton {
+    border: none;
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+}
