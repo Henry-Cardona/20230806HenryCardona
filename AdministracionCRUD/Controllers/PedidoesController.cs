@@ -62,7 +62,7 @@ namespace AdministracionCRUD.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdMarca,IdModelo,FechaInicio,FechaFinal,Estado")] Pedido pedido)
+        public async Task<IActionResult> Create([Bind("Id,IdMarca,IdModelo,FechaInicio,FechaFinal,Estado,persona")] Pedido pedido)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace AdministracionCRUD.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdMarca,IdModelo,FechaInicio,FechaFinal,Estado")] Pedido pedido)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdMarca,IdModelo,FechaInicio,FechaFinal,Estado,persona")] Pedido pedido)
         {
             if (id != pedido.Id)
             {

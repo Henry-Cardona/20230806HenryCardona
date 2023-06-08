@@ -21,7 +21,7 @@ namespace AdministracionCRUD.Controllers
         // GET: Equipoes
         public async Task<IActionResult> Index(string buscar)
         {
-            var equipos_encontrados = from equipos in _context.Equipos select equipos;
+            var equipos_encontrados = from equipos in _context.Equipos.Include(p => p.IdMarcaNavigation) select equipos;
             if (!String.IsNullOrEmpty(buscar))
             {
                 equipos_encontrados = equipos_encontrados.Where(item => item.Nombre!.Contains(buscar));

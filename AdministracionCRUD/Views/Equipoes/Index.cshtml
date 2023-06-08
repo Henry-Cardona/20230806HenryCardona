@@ -1,4 +1,6 @@
-﻿@model IEnumerable<AdministracionCRUD.Models.Equipo>
+﻿@using AdministracionCRUD.Models
+
+@model IEnumerable<AdministracionCRUD.Models.Equipo>
 
 @{
     ViewData["Title"] = "Listado de Equipos";
@@ -22,13 +24,13 @@
                 @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.IdMarcaNavigation.Nombre)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Serie)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdMarcaNavigation)
             </th>
             <th></th>
         </tr>
@@ -40,13 +42,13 @@
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Nombre)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Serie)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdMarcaNavigation.Nombre)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-dark">Editar</a> |
