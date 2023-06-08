@@ -11,8 +11,10 @@ public partial class Pedido
     public int? IdMarca { get; set; }
 
     public int? IdModelo { get; set; }
+
     [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
     public DateTime? FechaInicio { get; set; }
+
     [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
     public DateTime? FechaFinal { get; set; }
 

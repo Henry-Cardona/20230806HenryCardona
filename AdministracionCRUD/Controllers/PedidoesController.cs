@@ -29,6 +29,7 @@ namespace AdministracionCRUD.Controllers
               //  pedidos_encontrados = pedidos_encontrados.Where(item => item.id.Contains(buscar));
             //}
             //return View(await pedidos_encontrados.ToListAsync());
+
         }
 
         // GET: Pedidoes/Details/5
